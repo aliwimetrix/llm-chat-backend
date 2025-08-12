@@ -15,7 +15,7 @@ const groq = new Groq({
 })
 
 app.get("/", async (req: Request, res: Response) => {
-  res.write("Hello World!")
+  res.send("Hello World!")
 
 })
 
