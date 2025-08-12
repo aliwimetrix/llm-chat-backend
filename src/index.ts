@@ -14,6 +14,11 @@ const groq = new Groq({
   apiKey: process.env.GROQ_API_KEY
 })
 
+app.get("/", async (req: Request, res: Response) => {
+  res.write("Hello World!")
+
+})
+
 app.post("/api/chat", async (req: Request, res: Response) => {
   try {
     const { prompt } = req.body;
